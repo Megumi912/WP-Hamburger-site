@@ -1,0 +1,72 @@
+
+.l-footer{
+    position: relative;
+    width: 100%;
+    height: 150px;  
+    color: #fff;
+    font-weight: normal;
+    background-image: url(/img/footer_bg.png);
+    background-size: cover;
+    z-index: 500;
+    &_list {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 40px;
+        width: 250px;
+        height: 27px;
+        a {
+            font-size: 20px;
+        }
+        .c-button_centreLine {
+            margin: auto 10px;
+            width: 1px;
+            height: 20px;
+            background-color: #fff;
+        }
+    }
+    .c-copyright {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-bottom: 30px;
+        width: 150px;
+        height: 19px;
+        p {
+            font-family: 'm-plus-1m';
+            font-size: 14px;
+            font-weight: 100;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

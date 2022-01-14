@@ -1,0 +1,14 @@
+/*タブレット版 最小*/
+$tb: 768px;
+@mixin tb {
+    @media screen and (min-width: $tb) {
+        @content;
+    }
+}
+/*PC版 最小*/
+$pc: 1200px;
+@mixin pc {
+    @media screen and (min-width: $pc) {
+        @content;
+    }
+}

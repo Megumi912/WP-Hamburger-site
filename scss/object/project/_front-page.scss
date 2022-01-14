@@ -1,0 +1,126 @@
+@use "../../foundation/mixin";
+
+// ----- テイクアウト -------------------
+
+.p-mainMenu {
+    @include mixin.tb {
+        display: flex;
+        width: 100%;
+    }
+    @include mixin.pc {
+        width: calc(100% - 367px);
+        margin-right: 367px;
+    }
+    .p-takeOut {
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        padding: 2%;
+        margin: 8% 5%;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(/img/takeout_back.png);
+        @include mixin.tb {
+            width: 100%;
+        }
+        h2{
+            position: relative;
+            font-size: 41px;
+            margin-bottom: 200px;
+            color: #EAEAEA;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 80px;
+                display: inline-block;
+                width: 33.89px;
+                height: 4px;
+                background-color: #fff;
+            }
+        }
+        .p-takeout{
+            width: 90%;
+            margin: 0 5%;
+            margin-bottom: 2%;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            dt{
+                font-size: 22px;
+                color: #3C2A10;
+                padding: 20px;
+            }
+            dd{
+                font-size: 16px;
+                font-weight: normal;
+                color: #3C2A10;
+                padding: 0 15px 15px 15px;
+            }
+            &_first {
+                bottom: 160px;
+            }
+            &_second {
+                bottom: 20px;
+            }
+        }
+    }
+    
+    // ----- イートイン ------------------------
+    
+    .p-eatIn {
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        padding: 2%;
+        margin: 8% 5%;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(/img/eatin-bg.png);
+        @include mixin.tb {
+            width: 100%;
+            margin-left: 0;
+        }
+        h2{
+            position: relative;
+            margin-bottom: 200px;
+            font-size: 41px;
+            color: #EAEAEA; 
+            &::before {
+                content: '';
+                position: absolute;
+                top: 80px;
+                display: inline-block;
+                width: 33.89px;
+                height: 4px;
+                background-color: #fff;
+            }
+        }
+        .p-eatin {
+            width: 90%;
+            margin: 0 5%;
+            margin-bottom: 2%;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            dt{
+                font-size: 22px;
+                color: #3C2A10;
+                padding: 20px;
+            }
+            dd{
+                font-size: 16px;
+                font-weight: normal;
+                color: #3C2A10;
+                padding: 0 15px 15px 15px;
+            }
+            &_first {
+                bottom: 160px;
+            }
+            &_second {
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+

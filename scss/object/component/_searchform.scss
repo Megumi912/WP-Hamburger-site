@@ -1,0 +1,50 @@
+@use "../../foundation/mixin";
+
+.c-serchform {
+    text-align: center;
+    @include mixin.pc {
+            display: inline;
+            position: absolute;
+            top: 86px;
+            right: 31px;
+    }
+    .c-serchform__space {
+        width: 230px;
+        height: 46px;
+        text-indent: 2.2em;
+        background-image: url(/img/search_01.png);
+        background-repeat: no-repeat;
+        background-position: 8px center;
+        background-size: auto 60%;
+        background-color: #ffffff;
+        border: 1px solid #707070;
+        border-radius: 10px;
+        @include mixin.tb {
+            width: 396px;
+        }
+        @include mixin.pc {
+            width: 350px;
+        }
+    }
+    .c-submit {
+        width: 78px;
+        height: 46px;
+        margin-left: 10px;
+        background-color: #F2EDE9;
+        border: 1px solid #707070;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        @include mixin.tb {
+            width: 136px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

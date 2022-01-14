@@ -1,0 +1,115 @@
+@use "../../foundation/mixin";
+
+// ----- SP版サイドバー出すボタン ---------
+
+.js-hamburger {
+    position: absolute;
+    top: 14px;
+    right: 26px;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 200;
+    @include mixin.pc {
+        visibility: hidden;
+    }
+} 
+
+.pc-hamburger {
+    position: absolute;
+    top: 82px;
+    right: 275px;
+    font-weight: 700;
+    font-size: 24px;
+    z-index: 200;
+    visibility: hidden;
+    @include mixin.pc {
+        visibility: visible;
+    }
+}
+
+
+.nav_open .js-hamburger {
+    display: none;
+}
+
+.nav_open .c-hamburger_line_btn {
+    visibility: hidden;
+}
+
+.nav_open .hamburger_line {
+    position: absolute;
+    transition: all .2s;
+    width: 34px;
+    height: 5px;
+    background-color: #707070;
+    right: 17px;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.hamburger_line1 { top: 10px; }
+.hamburger_line2 { top: 32px; }
+
+
+// ----- バツボタン ---------------
+
+.nav_open .hamburger_line1 {
+    transform: rotate(45deg);
+    top: 20px;
+    z-index: 200;
+    visibility: visible;
+}
+
+.nav_open .hamburger_line2 {
+    transform: rotate(-45deg);
+    top: 20px;
+    z-index: 200;
+    visibility: visible;
+}
+
+.c-table__btn {
+    width: 335px;
+    height: 81px;
+    background-color: #F2EDE9;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 700;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

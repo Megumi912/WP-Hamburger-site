@@ -1,0 +1,65 @@
+@use "../foundation/mixin";
+
+.l-header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 217px;
+    background-color: #FFF7EF;
+    flex-direction: column;
+    text-align: center;
+    @include mixin.pc {
+        width: calc(100% - 367px);
+        margin-right: 367px;
+    }
+    h1 {
+        font-size: 40px;
+        margin: 40px 86px;
+        @include mixin.pc {
+            display: inline;
+            position: absolute;
+            top: 86px;
+            left: 65px;
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

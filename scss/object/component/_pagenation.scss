@@ -1,0 +1,36 @@
+@use "../../foundation/mixin";
+
+.c-pagenation {
+    @include mixin.pc {
+        margin-right: 367px;
+    }
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 20px;
+        @include mixin.tb {
+            display: none;
+        }
+    }
+    &_list-tb {
+        display: none;
+        @include mixin.tb {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+        span {
+            margin-right: 10px;
+            padding: 10px;
+        }
+        ul {
+            display: flex;
+            li {
+                padding: 10px 15px;
+                border: 1px solid #707070;
+                margin-right: 10px;
+                background-color: #fff;
+            }
+        }
+    }
+}
