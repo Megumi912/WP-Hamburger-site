@@ -21,7 +21,7 @@
         margin: 8% 5%;
         background-size: cover;
         background-position: center center;
-        background-image: url(/img/takeout_back.png);
+        background-image: url("../img/takeout_back.png");
         @include mixin.tb {
             width: 100%;
         }
@@ -77,7 +77,7 @@
         margin: 8% 5%;
         background-size: cover;
         background-position: center center;
-        background-image: url(/img/eatin-bg.png);
+        background-image: url("../img/eatin-bg.png");
         @include mixin.tb {
             width: 100%;
             margin-left: 0;

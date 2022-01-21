@@ -1,89 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<title>Hamburger-site</title>
-<meta name="description" content="ハンバーガーのサイト"/>
-<link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-<link rel="icon" href="/img/food_hamburger_cheese.png">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <?php get_header(); ?> 
 </head>
 <body>
 
     <div class ="wrapper">
-        <!-- ヘッダートップ -->
-        <header class="l-header">
-            <h1><a href="index.html">Hamburger</a></h1>
-            <form class="c-serchform">
-                <input class="c-serchform__space font-awesome-solid-icon" type="text">
-                <input type="submit" class="c-submit" value="検索"></input>
-            </form>
-        </header>
-        
-        <!-- サイドバー -->
-        <section>
-            <div class="p-sidebar">
-                <nav>
-                    <ul class="p-sidebar_navlink">
-                        <li class="p-navlink_menu">
-                            <a href="archive.html" class="p-navttl navttl_1">バーガー</a>
-                            <div class="p-sublink sublink_1">
-                                <ul>
-                                    <li><a href="single.html">ハンバーガー</a></li>
-                                    <li><a href="#">チーズバーガー</a></li>
-                                    <li><a href="#">テリヤキバーガー</a></li>
-                                    <li><a href="#">アボカドバーガー</a></li>
-                                    <li><a href="#">フィッシュバーガー</a></li>
-                                    <li><a href="#">ベーコンバーガー</a></li>
-                                    <li><a href="#">チキンバーガー</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        <li class="p-navlink_menu">
-                            <a href="#" class="p-navttl navttl_2">サイド</a>
-                            <div class="p-sublink sublink_2">
-                                <ul>
-                                    <li><a href="#">ポテト</a></li>
-                                    <li><a href="#">サラダ</a></li>
-                                    <li><a href="#">ナゲット</a></li>
-                                    <li><a href="#">コーン</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        <li  class="p-navlink_menu">
-                            <a href="#" class="p-navttl navttl_3">ドリンク</a>
-                            <div class="p-sublink sublink_3">
-                                <ul>
-                                    <li><a href="#">コーラ</a></li>
-                                    <li><a href="#">ファンタ</a></li>
-                                    <li><a href="#">オレンジ</a></li>
-                                    <li><a href="#">アップル</a></li>
-                                    <li><a href="#">紅茶（Ice/Hot）</a></li>
-                                    <li><a href="#">コーヒー（Ice/Hot）</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        
-        <!-- メニューボタン -->
-        <button class="c-hamburger js-hamburger" id="js-hamburger">Menu</button>
-        <p class="pc-hamburger">Menu</p>
-        <div id="c-hamburger_line_btn">
-            <span class="hamburger_line hamburger_line1"></span>
-            <span class="hamburger_line hamburger_line2"></span>
-        </div>
-        <div class="p-sidebar_bg" id="p-sidebar_bg"></div>
-        
-        <!------------- ここまで全ページ共通（sp版） ------------------------------------------------>
+        <?php get_template_part('includes/header'); ?>
         
         <!-- トップレイヤー -->
         <section class="l-toplayer_archive">
@@ -202,24 +125,11 @@
         </section>
     </div>
     
-    <!-------------- ここからフッター共通 ------------------------------->
-        
-        <!-- フッターメニュー -->
-        <footer class="l-footer">
-        <div class="l-footer_list">
-            <a>ショップ情報</a>
-            <div class="c-button_centreLine"></div>
-            <a>ヒストリー</a>
-        </div>
-        <div class="c-copyright">
-            <p>Copyright: RaiseTech</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <?php get_template_part('includes/footer'); ?>
+    
+    <?php get_footer(); ?>
 </body>
+
 </html>
 
 

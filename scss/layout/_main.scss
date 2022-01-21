@@ -4,7 +4,7 @@
 .l-toplayer {
     width: 100%;
     height: 285px;
-    background-image: url(/img/pc_Top.png);
+    background-image: url("../img/pc_Top.png");
     background-size: cover;
     background-position: 50%;
     @include mixin.pc {
