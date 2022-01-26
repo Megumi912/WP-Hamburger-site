@@ -41,7 +41,14 @@
     }
 }
 
-
+.c-serch_result {
+    color: #3C2A10;
+    margin-top: 5%;
+    margin-left: 5%;
+    @include mixin.pc {
+        margin-left: 2.5%;
+    }
+}
 
 
 

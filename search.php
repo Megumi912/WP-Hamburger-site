@@ -12,12 +12,13 @@
         <section class="l-toplayer_archive">
             <div class="l-toplayer_font">
                 <h2>Search:</h2>
-                <p>チーズバーガー</p>
+                <p><?php echo the_search_query() ?></p>
             </div>
         </section>
-        
-        <!-------------------- ここまで一部共通  -------------------------------------------------->
-        
+
+        <p class="c-serch_result">
+            「<?php echo the_search_query() ?>」の検索結果は<?php echo $wp_query->found_posts; ?>件です。
+        </p>
         
         <!-- バーガーメニュー -->
         <main class="p-main_wrapper">
@@ -38,95 +39,29 @@
             </p>
         </main>
         
+        <!-- 参考:https://blotame.com/2021/03/19/searchform/ -->
         <section class="p-articles_menuList">
-            <div class="p-articles_menu">
-                <div class="p-articles_img">
-                    <img src="img/menu_cheeseburger.png">
+            <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="p-articles_menu">
+                    <div class="p-articles_img">
+                        <?php if(has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail('large'); ?>
+                        <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/menu_cheeseburger.png">
+                        <?php endif; ?>
+                    </div>
+                    <div class="p-articles_text">
+                        <h3><?php the_title(); ?></h3>
+                        <?php the_excerpt(); ?>
+                        <button class="c-menu_detail"><a href="<?php the_permalink(); ?>">詳しく見る</a></button>
+                    </div>
                 </div>
-                <div class="p-articles_text">
-                    <h3>見出しが入ります</h3>
-                    <h4>小見出しが入ります</h4>
-                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="c-menu_detail">詳しく見る</button>
-                </div>
-            </div>
-            
-            <div class="p-articles_menu">
-                <div class="p-articles_img">
-                    <img src="img/menu_cheeseburger.png">
-                </div>
-                <div class="p-articles_text">
-                    <h3>見出しが入ります</h3>
-                    <h4>小見出しが入ります</h4>
-                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="c-menu_detail">詳しく見る</button>
-                </div>
-            </div>
-            
-            <div class="p-articles_menu">
-                <div class="p-articles_img">
-                    <img src="img/menu_cheeseburger.png">
-                </div>
-                <div class="p-articles_text">
-                    <h3>見出しが入ります</h3>
-                    <h4>小見出しが入ります</h4>
-                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="c-menu_detail">詳しく見る</button>
-                </div>
-            </div>
-            
-            <div class="p-articles_menu">
-                <div class="p-articles_img">
-                    <img src="img/menu_cheeseburger.png">
-                </div>
-                <div class="p-articles_text">
-                    <h3>見出しが入ります</h3>
-                    <h4>小見出しが入ります</h4>
-                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="c-menu_detail">詳しく見る</button>
-                </div>
-            </div>
-            
-            <div class="p-articles_menu">
-                <div class="p-articles_img">
-                    <img src="img/menu_cheeseburger.png">
-                </div>
-                <div class="p-articles_text">
-                    <h3>見出しが入ります</h3>
-                    <h4>小見出しが入ります</h4>
-                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="c-menu_detail">詳しく見る</button>
-                </div>
-            </div>
-            
+            <?php endwhile; ?>
+            <?php endif; ?>
         </section>
-        
-        <section class="c-pagenation">
-            <ul class="c-pagenation_list">
-                <li>≪ 前へ</li>
-                <li>次へ ≫</li>
-            </ul>
-            <div class="c-pagenation_list-tb">
-                <span>page 1/10</span>
-                <span>≪</span>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                </ul>
-                <span>≫</span>
-            </div>
-        </section>
-    </div>
-    
-    <?php get_template_part('includes/footer'); ?>
-    
+        <?php wp_pagenavi(); ?>
+        <?php get_template_part('includes/footer'); ?>
     <?php get_footer(); ?>
 </body>
 

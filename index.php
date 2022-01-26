@@ -20,7 +20,8 @@
         <!-- メインメニュー -->
         <main class="p-mainMenu">
             <div class="p-takeOut">
-            <a href="<?php the_permalink(); ?>">
+            <?php $cat = get_category_by_slug('takeout'); ?>
+            <a href="<?php echo get_category_link( $cat->cat_ID); ?>">
                 <h2>Take Out</h2>
                 <div class="p-takeOut_box">
                     <dl class ="p-takeout p-takeout_first">
@@ -35,7 +36,8 @@
             </a>
             </div>
             <div class="p-eatIn">
-            <a href="<?php the_permalink(); ?>">
+            <?php $cat = get_category_by_slug('eatin'); ?>
+            <a href="<?php echo get_category_link( $cat->cat_ID); ?>">
                 <h2>Eat In</h2>
                 <div class="p-eatIn_box">
                     <dl class="p-eatin p-eatin_first">
