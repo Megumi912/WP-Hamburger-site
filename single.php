@@ -6,7 +6,6 @@
 <body>
     <div class ="wrapper">
         <?php get_template_part('includes/header'); ?>
-
             <?php if (have_posts()): ?>
             <?php while (have_posts()): the_post(); ?>
                 <!-- トップレイヤー -->
@@ -23,14 +22,16 @@
                     <?php the_content(); ?>
                 </main>
             </div>   
-        <?php endwhile; ?>
-        <?php endif; ?>
+            <?php endwhile; ?>
+            <?php endif; ?>
 
     <?php get_template_part('includes/footer'); ?>
 
     <?php get_footer(); ?>
 </body>
 </html>
+
+
 
 
 

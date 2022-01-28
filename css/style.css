@@ -85,11 +85,9 @@ li {
 .l-footer_list a {
   font-size: 20px;
 }
-.l-footer_list .c-button_centreLine {
-  margin: auto 10px;
-  width: 1px;
-  height: 20px;
-  background-color: #fff;
+.l-footer .menu {
+  display: flex;
+  width: 300px;
 }
 .l-footer .c-copyright {
   position: absolute;
@@ -106,6 +104,16 @@ li {
   font-family: "m-plus-1m";
   font-size: 14px;
   font-weight: 100;
+}
+
+#menu-footermenu li::before {
+  content: "|";
+  padding: 0 0.6em;
+}
+
+#menu-footermenu li:first-child::before {
+  content: "";
+  padding: 0;
 }
 
 .l-toplayer {
@@ -184,8 +192,8 @@ li {
 .l-toplayer_single {
   width: 100%;
   height: 225px;
-  background-image: url("../img/single_Top2.png");
-  background-position: 50% 50%;
+  background: url("../img/single_Top2.png");
+  background-position: center center;
   background-size: cover;
   position: relative;
 }
@@ -750,6 +758,10 @@ blockquote .c-blockquote a {
   }
 }
 
+.wp-block-table {
+  margin: 0;
+}
+
 @media screen and (min-width: 768px) {
   .p-mainMenu {
     display: flex;
@@ -884,10 +896,10 @@ table td {
   background-color: #F5F5F5;
 }
 
-.p-sidebar_navlink {
+nav .menu {
   position: fixed;
   transition: all 0.6s;
-  padding-top: 40px;
+  padding-top: 212px;
   width: 328px;
   height: 100%;
   z-index: 200;
@@ -896,7 +908,7 @@ table td {
   background-color: #F2EDE9;
 }
 @media screen and (min-width: 1200px) {
-  .p-sidebar_navlink {
+  nav .menu {
     position: absolute;
     width: 367px;
     top: 0;
@@ -905,29 +917,23 @@ table td {
     display: inherit;
   }
 }
-
-.p-navttl {
+nav .menu li {
   display: block;
   font-size: 24px;
   font-weight: bold;
 }
-.p-navttl.navttl_1 {
-  margin: 180px 186px 46px 40px;
-}
-.p-navttl.navttl_2 {
-  margin: 34px 210px 39px 46px;
-}
-.p-navttl.navttl_3 {
-  margin: 38px 186px 38px 46px;
+nav .menu a {
+  margin-left: 40px;
 }
 
-.p-sublink {
-  margin-left: 66px;
+.sub-menu {
+  margin: 40px 0 40px 26px;
   text-align: left;
 }
-.p-sublink li {
+.sub-menu li {
   font-family: "m-plus-1m";
-  font-size: 20px;
+  font-size: 20px !important;
+  font-weight: 100 !important;
   margin-bottom: 23px;
 }
 
@@ -945,18 +951,16 @@ table td {
   position: fixed;
 }
 
-.nav_open .p-sidebar_navlink {
+.nav_open .menu {
   position: absolute;
   transition: all 0.6s;
   overflow-y: auto;
-  padding-top: 40px;
   width: 328px;
   z-index: 200;
   top: 0;
-  background-color: #F2EDE9;
 }
 
-.nav_open .p-sidebar .p-sidebar_navlink {
+.nav_open .p-sidebar .menu {
   right: 0;
 }
 

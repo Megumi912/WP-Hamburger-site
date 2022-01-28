@@ -1,10 +1,10 @@
 <footer class="l-footer">
     <div class="l-footer_list">
-        <a href="page.html">ショップ情報</a>
-        <div class="c-button_centreLine"></div>
-        <a href="page.html">ヒストリー</a>
+    <?php wp_nav_menu( array ( 'theme_location' => 'footer-menu' ) ); ?>
     </div>
     <div class="c-copyright">
         <p>Copyright: RaiseTech</p>
     </div>
 </footer>
+
+<!-- 参考　https://nelog.jp/wordpress-footer-menu -->

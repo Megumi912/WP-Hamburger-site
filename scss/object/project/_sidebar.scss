@@ -1,9 +1,9 @@
 @use "../../foundation/mixin";
 
-.p-sidebar_navlink {
+nav .menu {
     position: fixed;
     transition: all .6s;
-    padding-top: 40px;
+    padding-top: 212px;
     width: 328px;
     height: 100%;
     z-index: 200;
@@ -18,30 +18,26 @@
         transition: .3s;
         display: inherit;
     }
-}
-
-
-.p-navttl {
+    li {
     display: block;
     font-size: 24px;
     font-weight: bold;
-    &.navttl_1 {
-        margin: 180px 186px 46px 40px;
     }
-    &.navttl_2 {
-        margin: 34px 210px 39px 46px;
-    }
-    &.navttl_3 {
-        margin: 38px 186px 38px 46px;
+    a {
+        margin-left: 40px;
     }
 }
 
-.p-sublink{
-    margin-left: 66px;
+
+
+
+.sub-menu {
+    margin: 40px 0 40px 26px;
     text-align: left;
     li {
         font-family: 'm-plus-1m';
-        font-size: 20px;
+        font-size: 20px !important;
+        font-weight: 100 !important;
         margin-bottom: 23px;
     }
 }
@@ -67,19 +63,19 @@
 
 // ----- ボタンを押した時の動作 --------------
 
-.nav_open .p-sidebar_navlink {
+.nav_open .menu {
     position: absolute;
     transition: all .6s;
     overflow-y: auto;
-    padding-top: 40px;
+    // padding-top: 40px;
     width: 328px;
     z-index: 200;
     top: 0;
-    background-color: #F2EDE9;
+    // background-color: #F2EDE9;
 }
 
 
-.nav_open .p-sidebar .p-sidebar_navlink {
+.nav_open .p-sidebar .menu {
     right: 0; 
 }
 
@@ -87,13 +83,3 @@
     opacity: .8;
     visibility: visible;
 }
-
-
-
-
-
-
-
-
-
-

@@ -22,12 +22,10 @@
         a {
             font-size: 20px;
         }
-        .c-button_centreLine {
-            margin: auto 10px;
-            width: 1px;
-            height: 20px;
-            background-color: #fff;
-        }
+    }
+    .menu {
+        display: flex;
+        width: 300px;
     }
     .c-copyright {
         position: absolute;
@@ -47,6 +45,14 @@
     }
 }
 
+#menu-footermenu li::before {
+    content: "|";
+    padding: 0 0.6em;
+}
+#menu-footermenu li:first-child::before {
+    content: "";
+    padding: 0;
+}
 
 
 

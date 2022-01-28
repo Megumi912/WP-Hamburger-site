@@ -2,6 +2,10 @@
 add_action('init',function(){
     add_theme_support('post-thumbnails');
 
+    register_nav_menus( array (
+        'footer-menu' => 'フッターメニュー',
+        'sidenav' => 'サイドナビ',
+    ) );
 
 });
 
