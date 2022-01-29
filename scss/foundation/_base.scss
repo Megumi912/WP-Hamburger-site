@@ -1,3 +1,4 @@
+@use "../foundation/mixin";
 
 html {
     font-size: 100%;
@@ -23,7 +24,16 @@ li {
 }
 .wrapper {
     position: relative;
+    min-height: 800px;
+    @include mixin.tb {
+        min-height: 1100px;
+    }
+    @include mixin.pc {
+        min-height: 1400px;
+    }
 }
+
+
 
 
 

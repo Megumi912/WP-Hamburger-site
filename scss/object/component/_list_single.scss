@@ -1,34 +1,39 @@
-
-.c-list {
-    &_number{
-        ol:first-child {
-            margin-top: 30px;
-        }
-        ol:nth-child(1) {
-            margin-top: 20px;
-            margin-left: 18px;
-        }
-        ol:nth-child(2) {
-            margin-top: 20px;
-            margin-left: 20px;
-        }
-        li {
-            list-style: decimal;
-        }
+.wrapper {
+    ol {
+        padding: 0 20px;
     }
-    &_nonstyle {
-        ul:first-child {
-            margin-top: 60px;
-        }
-        ul:nth-child(1) {
-            margin-top: 20px;
-            margin-left: 18px;
-        }
-        ul:nth-child(2) {
-            margin-top: 20px;
-        }
+    ol li {
+        list-style: decimal;
+    }
+    ol:first-child {
+        margin-top: 30px;
+    }
+    ol:nth-child(1) {
+        margin-top: 0;
+        margin-left: 18px;
+    }
+    ol:nth-child(2) {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    
+    
+    ul li {
+        list-style: none;
+    }
+    ul:first-child {
+        margin-top: 60px;
+    }
+    ul:nth-child(1) {
+        margin-top: 0;
+        margin-left: 18px;
+    }
+    ul:nth-child(2) {
+        margin-top: 20px;
     }
 }
+
 
 
 

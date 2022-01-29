@@ -3,7 +3,8 @@
 <head>
     <?php get_header(); ?> 
 </head>
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div class ="wrapper">
         <?php get_template_part('includes/header'); ?>
             <?php if (have_posts()): ?>
@@ -21,9 +22,9 @@
                 <main class="p-main_articles">
                     <?php the_content(); ?>
                 </main>
-            </div>   
             <?php endwhile; ?>
             <?php endif; ?>
+    </div>   
 
     <?php get_template_part('includes/footer'); ?>
 

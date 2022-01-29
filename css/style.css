@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*タブレット版 最小*/
+/*PC版 最小*/
 html {
   font-size: 100%;
   margin: 0;
@@ -27,10 +29,19 @@ li {
 
 .wrapper {
   position: relative;
+  min-height: 800px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    min-height: 1100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    min-height: 1400px;
+  }
 }
 
-/*タブレット版 最小*/
-/*PC版 最小*/
 .l-header {
   position: relative;
   display: inline-block;
@@ -230,6 +241,7 @@ li {
   background-image: url("../img/pageTop2.png");
   background-size: cover;
   position: relative;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .l-toplayer_page {
@@ -464,28 +476,34 @@ blockquote .c-blockquote a {
   }
 }
 
-.c-list_number ol:first-child {
+.wrapper ol {
+  padding: 0 20px;
+}
+.wrapper ol li {
+  list-style: decimal;
+}
+.wrapper ol:first-child {
   margin-top: 30px;
 }
-.c-list_number ol:nth-child(1) {
-  margin-top: 20px;
+.wrapper ol:nth-child(1) {
+  margin-top: 0;
   margin-left: 18px;
 }
-.c-list_number ol:nth-child(2) {
+.wrapper ol:nth-child(2) {
   margin-top: 20px;
   margin-left: 20px;
 }
-.c-list_number li {
-  list-style: decimal;
+.wrapper ul li {
+  list-style: none;
 }
-.c-list_nonstyle ul:first-child {
+.wrapper ul:first-child {
   margin-top: 60px;
 }
-.c-list_nonstyle ul:nth-child(1) {
-  margin-top: 20px;
+.wrapper ul:nth-child(1) {
+  margin-top: 0;
   margin-left: 18px;
 }
-.c-list_nonstyle ul:nth-child(2) {
+.wrapper ul:nth-child(2) {
   margin-top: 20px;
 }
 
@@ -567,6 +585,7 @@ blockquote .c-blockquote a {
 @media screen and (min-width: 768px) {
   .p-articles_menuList .p-articles_menu {
     display: flex;
+    height: 400px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -576,6 +595,7 @@ blockquote .c-blockquote a {
 }
 .p-articles_menuList .p-articles_menu .p-articles_img img {
   width: 100%;
+  height: 250px;
   object-fit: cover;
 }
 @media screen and (min-width: 768px) {
@@ -762,6 +782,10 @@ blockquote .c-blockquote a {
   margin: 0;
 }
 
+.wp-block-gallery ul {
+  margin-left: 0 !important;
+}
+
 @media screen and (min-width: 768px) {
   .p-mainMenu {
     display: flex;
@@ -884,7 +908,11 @@ blockquote .c-blockquote a {
   bottom: 20px;
 }
 
+table {
+  border: 1px solid;
+}
 table td {
+  border: 1px solid;
   padding-left: 30px;
   height: 77px;
 }

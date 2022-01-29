@@ -6,7 +6,6 @@
 <body>
     <div class ="wrapper">
         <?php get_template_part('includes/header'); ?>                       
-        <!-- トップレイヤー -->
         <section class="l-toplayer_archive">
             <div class="l-toplayer_font">
                 <h2>Menu:</h2>

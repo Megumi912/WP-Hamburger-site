@@ -40,6 +40,7 @@
         margin-bottom: 20.9px;
         @include mixin.tb {
             display: flex;
+            height: 400px;
         }
         .p-articles_img {
             @include mixin.tb {
@@ -47,6 +48,7 @@
             }
             img {
                 width: 100%;
+                height: 250px;
                 object-fit: cover;
                 @include mixin.tb {
                     height: 100%;
@@ -227,6 +229,11 @@
 .wp-block-table {
     margin: 0;
 }
+
+.wp-block-gallery ul {
+    margin-left: 0 !important;
+}
+
 
 
 

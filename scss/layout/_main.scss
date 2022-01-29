@@ -102,6 +102,7 @@
     background-image: url("../img/pageTop2.png");
     background-size: cover;
     position: relative;
+    margin-bottom: 40px;
     @include mixin.tb {
         background-position: 50% 50%;
         height: 500px;

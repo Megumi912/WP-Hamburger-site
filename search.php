@@ -4,11 +4,8 @@
     <?php get_header(); ?> 
 </head>
 <body>
-
     <div class ="wrapper">
-        <?php get_template_part('includes/header'); ?>
-        
-        <!-- トップレイヤー -->
+        <?php get_template_part('includes/header'); ?>    
         <section class="l-toplayer_archive">
             <div class="l-toplayer_font">
                 <h2>Search:</h2>
@@ -20,7 +17,6 @@
             「<?php echo the_search_query() ?>」の検索結果は<?php echo $wp_query->found_posts; ?>件です。
         </p>
         
-        <!-- バーガーメニュー -->
         <main class="p-main_wrapper">
             <h2>小見出しが入ります</h2>
             <p> 
@@ -51,17 +47,18 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/menu_cheeseburger.png">
                         <?php endif; ?>
                     </div>
-                    <div class="p-articles_text">
-                        <h3><?php the_title(); ?></h3>
-                        <?php the_excerpt(); ?>
-                        <button class="c-menu_detail"><a href="<?php the_permalink(); ?>">詳しく見る</a></button>
-                    </div>
+                <div class="p-articles_text">
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_excerpt(); ?>
+                    <button class="c-menu_detail"><a href="<?php the_permalink(); ?>">詳しく見る</a></button>
                 </div>
+            </div>
             <?php endwhile; ?>
             <?php endif; ?>
         </section>
         <?php wp_pagenavi(); ?>
-        <?php get_template_part('includes/footer'); ?>
+    </div>
+    <?php get_template_part('includes/footer'); ?>
     <?php get_footer(); ?>
 </body>
 
