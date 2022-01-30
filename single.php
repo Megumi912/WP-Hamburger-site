@@ -19,7 +19,7 @@
                         <h1><?php the_title(); ?></h1>
                     </div>
                 </section>
-                <main class="p-main_articles">
+                <main <?php post_class('p-main_articles'); ?>>
                     <?php the_content(); ?>
                 </main>
             <?php endwhile; ?>
@@ -31,6 +31,11 @@
     <?php get_footer(); ?>
 </body>
 </html>
+
+
+
+
+
 
 
 

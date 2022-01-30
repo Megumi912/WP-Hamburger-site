@@ -45,7 +45,7 @@
                         <?php if(has_post_thumbnail()): ?>
                             <?php the_post_thumbnail('large'); ?>
                         <?php else: ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/menu_cheeseburger.png">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu_cheeseburger.png">
                         <?php endif; ?>
                     </div>
                 <div class="p-articles_text">
@@ -54,6 +54,7 @@
                     <button class="c-menu_detail"><a href="<?php the_permalink(); ?>">詳しく見る</a></button>
                 </div>
             </div>
+            <?php wp_link_pages(); ?>
             <?php endwhile; ?>
             <?php endif; ?>
         </section>

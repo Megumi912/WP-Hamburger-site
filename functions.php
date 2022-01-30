@@ -1,6 +1,8 @@
 <?php
 add_action('init',function(){
     add_theme_support('post-thumbnails');
+    add_theme_support( 'automatic-feed-links' ); 
+    add_theme_support( 'title-tag' );
 
     register_nav_menus( array (
         'footer-menu' => 'フッターメニュー',
