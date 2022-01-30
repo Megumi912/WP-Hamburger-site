@@ -543,6 +543,21 @@ blockquote .c-blockquote a {
   border: thin solid #707070;
 }
 
+.error {
+  text-align: center;
+  background-color: #fff;
+}
+.error_img {
+  width: 70%;
+}
+.error__text a {
+  background-color: #d8a373;
+  color: #fff;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
 .p-main_wrapper {
   color: #3C2A10;
   margin: 5%;

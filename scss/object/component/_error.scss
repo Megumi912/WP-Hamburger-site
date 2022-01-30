@@ -1,0 +1,17 @@
+.error {
+    text-align: center;
+    background-color: #fff;
+    &_img {
+        width: 70%;
+    }
+    &__text {
+        a {
+            background-color: #d8a373;
+            color: #fff;
+            padding: 15px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+    }
+
+}
