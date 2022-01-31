@@ -1,8 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-<title><?php the_title(); ?></title>
-
 <link href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="//unpkg.com/ress/dist/ress.min.css">
 <link rel="icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/img/food_hamburger_cheese.png">
